@@ -27,7 +27,10 @@ class BestBooks extends React.Component {
 
 
   componentDidMount() {
+    console.log(SERVER);
+
     this.getBooks();
+
   }
 
   render() {
@@ -38,8 +41,8 @@ class BestBooks extends React.Component {
       return <Carousel.Item key={book._id}>
         <img
           className="book"
-          src="https://unsplash.com/photos/9BoqXzEeQqM"
-          alt="book.title"
+          src="https://place-hold.it/900x500"
+          alt={book.title}
         />
         <Carousel.Caption>
           <h2> {book.title}</h2>

@@ -3,7 +3,6 @@ import Header from './Header';
 import Footer from './Footer';
 import BestBooks from './BestBooks';
 import About from './About'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Routes,
@@ -19,16 +18,19 @@ class App extends React.Component {
           <Routes>
             <Route
               exact path="/"
-              element={<BestBooks/>}
+              element={<BestBooks />}
             >
             </Route>
             <Route
-              exact path="/about"
-              element={<About/>}>
+              path="/about"
+              element={
+                <About />
+              }
+            >
             </Route>
-        </Routes>
-        <Footer />
-      </Router>
+          </Routes>
+          <Footer />
+        </Router>
       </>
     )
   }
