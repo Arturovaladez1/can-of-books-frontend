@@ -8,7 +8,9 @@ class BestBooks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: []
+      books: [],
+      showModal: false,
+      error: {}
     }
   }
 
@@ -25,9 +27,25 @@ class BestBooks extends React.Component {
 
   }
 
+  addBook = async (input) => {
+    try {
+      let url = `${process.env.SERVER}/books`;
+      let addedBook = await axios.post(url, input);
+      
+      this.setState({
+        books: [...this.state.books, addedBook.data]
+      })
+    } catch (error) {
+      console.log(error.response.data);
+      this.setState({
+        error: error
+      });
+    }
+  }
+
 
   componentDidMount() {
-    console.log(SERVER);
+    // console.log(SERVER);
 
     this.getBooks();
 
@@ -37,7 +55,7 @@ class BestBooks extends React.Component {
 
     /* TODO: render all the books in a Carousel */
     let books = this.state.books.map(book => {
-      console.log(book.title);
+      // console.log(book.title);
       return <Carousel.Item key={book._id}>
         <img
           className="book"
