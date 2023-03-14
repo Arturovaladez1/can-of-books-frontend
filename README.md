@@ -40,11 +40,11 @@ With stand up and check in at night we've got it baked in to our process to self
 
 ## Estimates
 
-Name of feature: Front End labb1
+Name of feature: Front End lab11
 Estimate of time needed to complete:4 hours
 Start time: 2:32pm
-Finish time:
-Actual time needed to complete: 
+Finish time:8:50pm
+Actual time needed to complete: 6.18hrs
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
