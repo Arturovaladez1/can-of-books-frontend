@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Carousel from 'react-bootstrap/Carousel';
-import "./BestBooks.css"
+
 let SERVER = process.env.REACT_APP_SERVER;
 
 class BestBooks extends React.Component {
@@ -37,14 +37,14 @@ class BestBooks extends React.Component {
       console.log(book.title);
       return <Carousel.Item key={book._id}>
         <img
-          className=""
+          className="book"
           src=""
-          alt=""
+          alt="book.title"
         />
-        <CarouselCaption.Caption>
+        <Carousel.Caption>
           <h2> {book.title}</h2>
           <p>{book.description}</p>
-        </CarouselCaption.Caption>
+        </Carousel.Caption>
       </Carousel.Item>
     })
 
