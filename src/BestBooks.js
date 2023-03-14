@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Carousel from 'bootstrap';
+import Carousel from 'react-bootstrap/Carousel';
 import "./BestBooks.css"
 let SERVER = process.env.REACT_APP_SERVER;
 
@@ -58,7 +58,7 @@ class BestBooks extends React.Component {
             {books}
           </Carousel>
         ) : (
-          <h3>No Books Found :(</h3>
+          <h3>No Books Found </h3>
         )}
       </>
     )
