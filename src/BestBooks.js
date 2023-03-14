@@ -38,7 +38,7 @@ class BestBooks extends React.Component {
       return <Carousel.Item key={book._id}>
         <img
           className="book"
-          src=""
+          src="https://unsplash.com/photos/9BoqXzEeQqM"
           alt="book.title"
         />
         <Carousel.Caption>
