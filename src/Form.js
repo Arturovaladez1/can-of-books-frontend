@@ -1,7 +1,7 @@
 import React from "react";
-import Button from 'react-bootstrap'
-import Form from 'react-bootstrap'
-import Modal from 'react-bootstrap'
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
+import Modal from 'react-bootstrap/Modal'
 
 class BookForm extends React.Component {
   constructor(props) {

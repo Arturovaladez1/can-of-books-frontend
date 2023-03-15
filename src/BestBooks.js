@@ -14,6 +14,8 @@ class BestBooks extends React.Component {
     this.state = {
       books: [],
       modalOpen: false,
+      // onHide:
+
     }
   }
 
@@ -98,9 +100,9 @@ class BestBooks extends React.Component {
         <Carousel.Caption>
           <h2> {book.title}</h2>
           <p>{book.description}</p>
-       <div className='DeleteButtonDiv'> 
-       <DeleteButton onClick= {() => {this.deleteBook(book._id)}}/>
-         </div>
+          <div className='DeleteButtonDiv'> 
+        <DeleteButton bookId={book._id} deleteBook={this.deleteBook}/>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
     })
