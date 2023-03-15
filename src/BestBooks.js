@@ -98,10 +98,10 @@ class BestBooks extends React.Component {
         <Carousel.Caption>
           <h2> {book.title}</h2>
           <p>{book.description}</p>
-        </Carousel.Caption>
        <div className='DeleteButtonDiv'> 
        <DeleteButton onClick= {() => {this.deleteBook(book._id)}}/>
          </div>
+        </Carousel.Caption>
       </Carousel.Item>
     })
 
