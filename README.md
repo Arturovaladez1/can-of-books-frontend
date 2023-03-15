@@ -46,5 +46,13 @@ Start time: 2:32pm
 Finish time:8:50pm
 Actual time needed to complete: 6.18hrs
 
+Name of feature: Front End lab12
+Estimate of time needed to complete:4 hours
+Start time: 1:00pm
+Finish time:10:50pm
+Actual time needed to complete: 9.50hrs
+
+
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
