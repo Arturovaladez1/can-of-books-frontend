@@ -14,15 +14,22 @@ class BestBooks extends React.Component {
     this.state = {
       books: [],
       modalOpen: false,
-      // onHide:
+      
 
     }
+  }
+
+  componentDidMount() {
+    // console.log(SERVER);
+    this.getBooks();
+
   }
 
   handleModalOpen = () => {
     this.setState({
       modalOpen: true,
     })
+
   }
 
   handleModalClose = () => {
@@ -36,12 +43,14 @@ class BestBooks extends React.Component {
   // create a book
   addBook = async (input) => {
     try {
-      let url = `${process.env.SERVER}/books`;
+      console.log('hello');
+      let url = `${SERVER}/books`;
       let addedBook = await axios.post(url, input);
 
       this.setState({
-        books: [...this.state.books, addedBook.data]
+        books: [...this.state.books, addedBook.data],
       })
+      console.log(addedBook.data);
     } catch (error) {
       console.log(error.response.data);
       this.setState({
@@ -79,12 +88,11 @@ class BestBooks extends React.Component {
 
   }
 
-  componentDidMount() {
-    // console.log(SERVER);
+  // componentDidMount() {
+  //   // console.log(SERVER);
+  //   this.getBooks();
 
-    this.getBooks();
-
-  }
+  // }
 
   render() {
 
@@ -117,10 +125,11 @@ class BestBooks extends React.Component {
               {books}
             </Carousel>
 
-            <Button onClick={this.handleOpenModal}>Add A Book</Button>
-            <BookForm addBook={this.createBook}
+            <Button onClick={this.handleModalOpen}>Add A Book</Button>
+            <BookForm addBook={this.addBook}
               show={this.state.modalOpen}
-              handleClose={this.handleCloseModal} />
+              // info={this.state.modalOpen}
+              handleClose={this.handleModalClose} />
           </>
         ) : (
           <h3>No Books Found </h3>

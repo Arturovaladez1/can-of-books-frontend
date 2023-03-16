@@ -22,17 +22,17 @@ class BookForm extends React.Component {
     }
     console.log(newBook);
     this.props.addBook(newBook);
-    this.props.handleClose();
+    // this.props.handleClose();
   }
   render() {
-    const show = this.props.show
-    const handleClose = this.props.handleClose
+    // const show = this.props.show
+    // const handleClose = this.props.handleClose
 
 
     return (
       <>
-        <Modal show={show} onHide={handleClose} >
-          <Modal.Header closeButton>
+        <Modal show={this.props.show}  >
+          <Modal.Header closeButton onClick={this.props.handleClose}>
             <Modal.Title>Add A Book</Modal.Title>
           </Modal.Header>
           <Modal.Body>
