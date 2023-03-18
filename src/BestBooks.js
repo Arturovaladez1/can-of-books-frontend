@@ -4,6 +4,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import BookForm from './Form'
 import Button from 'react-bootstrap/Button';
 import DeleteButton from './DeleteButton'
+import { withAuth0 } from "@auth0/auth0-react";
+
 
 
 let SERVER = process.env.REACT_APP_SERVER;
@@ -140,4 +142,4 @@ class BestBooks extends React.Component {
   }
 }
 
-export default BestBooks;
+export default withAuth0(BestBooks);
