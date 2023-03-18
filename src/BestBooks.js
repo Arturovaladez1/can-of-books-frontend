@@ -79,17 +79,34 @@ class BestBooks extends React.Component {
     }
   }
   getBooks = async () => {
-    try {
-      let results = await axios.get(`${SERVER}/books`);
-      this.setState({
-        books: results.data
-      })
-    } catch (error) {
-      console.log(error.response.data);
+    if (this.props.auth0.isAuthenticated) {
+
+      try {
+        const res = await this.props.auth0.getIdTokenClaims();
+        console.log(res);
+        const jwt = res._raw;
+        console.log(jwt);
+        const config = {
+          method: 'get',
+          baseURL: process.env.REACT_APP_SERVER,
+          url: '/book',
+          headers: {
+            'Authorization': `Bearer ${jwt}`
+          }
+        }
+        let results = await axios(config)
+
+        // let results = await axios.get(`${REACT_APP_SERVER}/books`);
+        this.setState({
+          books: results.data
+        })
+      } catch (error) {
+        console.log('Error! :', error.response.data);
+      }
+      
     }
-
   }
-
+    
   // componentDidMount() {
   //   // console.log(SERVER);
   //   this.getBooks();
