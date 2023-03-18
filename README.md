@@ -52,6 +52,18 @@ Start time: 1:00pm
 Finish time:10:50pm
 Actual time needed to complete: 9.50hrs
 
+Name of feature: Front End lab13
+Estimate of time needed to complete:4 hours
+Start time: 3:00pm
+Finish time:10:50pm
+Actual time needed to complete: 7.50hrs
+
+Name of feature: Front End lab15
+Estimate of time needed to complete:4 hours
+Start time: 4:04pm
+Finish time: 
+Actual time needed to complete: hrs
+
 
 
 ## Credit and Collaborations
